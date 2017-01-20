@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { fetchVideo } from "../actions/index";
+import { connect } from "react-redux";
+import { fetchVideos } from "../actions/index";
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
     constructor(props) {
         super(props);
         this.state = { term: "" };
@@ -11,7 +12,7 @@ export default class SearchBar extends Component {
     onInputChange(event){
         console.log(event.target.value);
         this.setState({ term: event.target.value }); // ES6
-        this.props.fetchVideo(event.target.value);
+        this.props.fetchVideos(event.target.value);
     }
 
     // make state always = value of input for immediate response and
@@ -27,3 +28,5 @@ export default class SearchBar extends Component {
         );
     }
 }
+
+export default connect(null, { fetchVideos })(SearchBar);
