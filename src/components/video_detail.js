@@ -12,13 +12,12 @@ class VideoDetail extends Component {
         const vidUrl = `https://youtube.com/embed/${videoId}`;
 
         return (
-            <div className="video-detail col-md-8">
+            <div className="video-detail col-xs-8">
                 <div className="embed-responsive embed-responsive-16by9">
                     <iframe className="embed-responsive-item" src={vidUrl}></iframe>
                 </div>
                 <div className="details">
                     <div> {this.props.selectedVideo.snippet.title} </div>
-                    <div> {this.props.selectedVideo.snippet.description} </div>
                 </div>
             </div>
         );

@@ -9,6 +9,8 @@ class VideoList extends Component {
     // creates a single VideoListLtem
     renderVideo(videoData) {
             const title = videoData.snippet.title;
+            const channel = videoData.snippet.channelTitle;
+            const description = videoData.snippet.description.substring(0, 50) + "...";
             const imageUrl = videoData.snippet.thumbnails.default.url;
             const tag = videoData.etag;
 
@@ -18,6 +20,8 @@ class VideoList extends Component {
                 videoData={videoData}
                 key={tag}
                 title={title} 
+                channel={channel}
+                description={description}
                 imageUrl={imageUrl} />
         );
     }
@@ -25,7 +29,7 @@ class VideoList extends Component {
     // a list of matched videos
     render() {
         return (
-            <ul className="col-md-4 list-group">
+            <ul className="col-xs-4 list-group">
                 {this.props.videos.videos.map(this.renderVideo.bind(this))}
             </ul>
         );

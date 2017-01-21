@@ -1,0 +1,107 @@
+/*body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, { font-style: normal; font-weight: normal; margin: 0; padding: 0;}*/
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    background-color: #eee !important;
+}
+
+/*Search Bar*/
+
+.logo {
+    line-height: 28px;
+    text-align: center;
+    width: 160px;
+    font-size: 1.2rem;
+}
+
+.search-bar-container {
+    background: #df1f1f;
+    color: white;
+    padding: 20px;
+    height: 70px;
+}
+
+.search-bar-container input {
+    background: #ac0809;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 20px;
+    min-width: 231px;
+    width: 80%;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+/*Video Detail*/
+.video-detail {
+    padding: 0 !important; /*space between vid and list. try changing col.*/
+}
+
+.video-detail .details {
+    background: #22242a;
+    color: white;
+    padding: 10px;
+}
+
+
+
+
+/*Video List*/
+.list-group {
+    height: 80vh;
+    overflow-x: hidden;
+    padding-right: 0 !important; /*scrollbar padding*/
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+
+
+/*Video Item*/
+p { margin-bottom: 0 !important;}
+
+.video-item img {
+    max-width: 64px;
+}
+
+.video-title {
+    padding-top: 5px;
+    margin: 0 !important; 
+    font-weight: bold;
+}
+
+.video-author {
+    color: #df1f1f;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.video-description {
+    color: #727785;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.list-group-item:hover {
+    background: #22242a;
+    color: white;
+}
+
+.list-group-item {
+    border: 0 !important;
+    border-radius: 0 !important;
+}

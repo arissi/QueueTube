@@ -9,7 +9,9 @@ export default (props) => {
                     <img className="media-object" src={props.imageUrl} />
                 </div>
                 <div className="media-body">
-                    <div className="media-heading">{props.title}</div>
+                    <div className="media-heading video-title">{props.title}</div>
+                    <p className="video-author">{props.channel}</p>
+                    <p className="video-description">{props.description}</p>
                 </div>
             </div>
         </li>
