@@ -1,6 +1,6 @@
-import { FETCH_VIDEOS } from "../actions/index"
+import { FETCH_VIDEOS, SELECT_VIDEO } from "../actions/index"
 
-
+// videos contains all the matched videos
 const INITIAL_STATE = { videos: [], selectedVideo: null };
 
 export default function (state=INITIAL_STATE, action) {
@@ -8,6 +8,8 @@ export default function (state=INITIAL_STATE, action) {
         case FETCH_VIDEOS:
             console.log(action.payload.data.items);
             return { ...state, videos: action.payload.data.items };
+        case SELECT_VIDEO:
+            return { ...state, selectedVideo: action.payload };
         default:
             return state;
     }

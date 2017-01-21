@@ -1,8 +1,9 @@
 import React from "react";
 
+// list item for each found video
 export default (props) => {
     return (
-        <li  className="list-group-item">
+        <li onClick={() => props.onSelectVideo(props.videoData)} className="list-group-item">
             <div className="video-list-media">
                 <div className="media-left">
                     <img className="media-object" src={props.imageUrl} />
