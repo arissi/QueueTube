@@ -77,6 +77,8 @@ body {
 
 /*Queue List*/
 .queue-list {
+    min-height: 40vh;
+    max-height: 40vh;
     float: right !important;
 }
 
