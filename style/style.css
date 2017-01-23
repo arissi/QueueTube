@@ -60,7 +60,7 @@ body {
 
 /*Video List*/
 .list-group {
-    height: 80vh;
+    height: 85vh;
     overflow-x: hidden;
     padding-right: 0 !important; /*scrollbar padding*/
 }
@@ -69,9 +69,49 @@ body {
     cursor: pointer;
 }
 
+.video-list {
+    float:left;
+}
 
 
-/*Video Item*/
+
+/*Queue List*/
+.queue-list {
+    float: right !important;
+}
+
+.queue-list li {
+    background: #22242a;
+    color: #727785;
+    font-size: 14px;
+    border-bottom: 2px solid #33363f !important;
+    padding: 0px 10px;
+}
+
+
+/*Queue List Item*/
+.queue-item-title:hover {
+    background: #1171A2;
+    color: white;
+}
+
+.queue-item-title {
+    padding: 10px 20px;
+}
+
+.queue-item-delete {
+    color: #ac0809;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.queue-item-delete:hover { 
+    background: #ac0809; 
+    color: white;
+}
+
+
+/*Video List Item*/
 p { margin-bottom: 0 !important;}
 
 .video-item img {

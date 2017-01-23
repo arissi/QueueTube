@@ -5,6 +5,8 @@ const ROOT_URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxR
 
 export const FETCH_VIDEOS = "FETCH_VIDEOS";
 export const SELECT_VIDEO = "SELECT_VIDEO";
+export const QUEUE_VIDEO = "QUEUE_VIDEO";
+export const DELETE_VIDEO = "DELETE_VIDEO";
 
 export function fetchVideos(term) {
     var url = `${ROOT_URL}&q=${term}`;
@@ -23,3 +25,17 @@ export function onSelectVideo(video) {
         payload: video
     };
 }
+
+export function onQueueVideo(video) {
+    return {
+        type: QUEUE_VIDEO,
+        payload: video
+    }
+}
+
+ export function deleteVideo(id) {
+     return {
+         type: DELETE_VIDEO,
+         payload: id
+     }
+ }

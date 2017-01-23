@@ -12,7 +12,7 @@ class VideoDetail extends Component {
         const vidUrl = `https://youtube.com/embed/${videoId}`;
 
         return (
-            <div className="video-detail col-xs-8">
+            <div className="video-detail col-xs-6">
                 <div className="embed-responsive embed-responsive-16by9">
                     <iframe className="embed-responsive-item" src={vidUrl}></iframe>
                 </div>
@@ -24,8 +24,8 @@ class VideoDetail extends Component {
     }
 }
 
-function mapStateToProps({ videos }){
-    return { selectedVideo: videos.selectedVideo };
+function mapStateToProps({ queue }){
+    return { selectedVideo: queue.selectedVideo };
 }
 
 export default connect(mapStateToProps)(VideoDetail);

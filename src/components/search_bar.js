@@ -7,8 +7,6 @@ class SearchBar extends Component {
     constructor(props) {
         super(props);
         this.state = { term: "" };
-
-        this.props.fetchVideos("surfboards");
     }
 
     // fetch the video after debounce time
