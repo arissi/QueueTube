@@ -25,10 +25,14 @@ class QueueList extends Component {
     // a list of matched videos
     render() {
         return (
-            <ul className="queue-list col-xs-6 list-group">
-                {this.props.queue.queue.map(this.renderQueue.bind(this))}
-            </ul>
-        );
+            <div className="queue-container col-xs-6">
+                <ul 
+                className="list-group queue-list"
+                >
+                    {this.props.queue.queue.map(this.renderQueue.bind(this))}
+                </ul>
+            </div> 
+            );
     }
 }
 

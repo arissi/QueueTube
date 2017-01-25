@@ -76,10 +76,16 @@ body {
 
 
 /*Queue List*/
-.queue-list {
-    min-height: 40vh;
-    max-height: 40vh;
+.queue-container {
+    height: 30vh !important;
+    max-height: 30vh !important;
+    background: #22242a;
     float: right !important;
+    padding: 0 !important;
+}
+
+.queue-list {
+    max-height: 30vh !important;
 }
 
 .queue-list li {
