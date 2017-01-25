@@ -4,7 +4,12 @@
 
 YouTube app with instant searching and playlist capabilities
 
-It single page app. Features and instant Ajax search and Playlists with Automatomatic play
+It's a single page app. 
+
+# Features 
+Instant AJAX search 
+Playlists 
+Automatomatic Video Play
 
 built with ReactJS ReduxJS.
 
