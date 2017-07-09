@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { onSelectVideo, deleteVideo } from "../actions/index";
+import { onSelectVideo, deleteVideo, archiveVideo } from "../actions/index";
 import YouTube from "react-youtube";
+import { Link } from 'react-router';
 
 class VideoDetail extends Component {
 
@@ -11,6 +12,11 @@ class VideoDetail extends Component {
         this.props.onSelectVideo(this.props.queue.queue[0].video);
         this.props.deleteVideo(id);
     }
+
+		_onPlay(event) {
+			console.log('PLAYING');
+			this.props.archiveVideo(this.props.selectedVideo);
+		}
 
     render() {
         if (!this.props.selectedVideo) {
@@ -35,10 +41,19 @@ class VideoDetail extends Component {
                         opts={opts}
                         className= "embed-responsive-item"
                         onEnd={this._onEnd.bind(this)}
+												onPlay={this._onPlay.bind(this)}
                     />
                 </div>
                 <div className="details">
                     <div> {this.props.selectedVideo.snippet.title} </div>
+                </div>
+                <div className="tabs">
+										<Link to="/" className="btn active">
+											Queue
+										</Link>
+										<Link to="/history" className="btn">
+											History
+										</Link>
                 </div>
             </div>
         );
@@ -52,4 +67,4 @@ function mapStateToProps({ queue }){
      };
 }
 
-export default connect(mapStateToProps, { onSelectVideo, deleteVideo })(VideoDetail);
+export default connect(mapStateToProps, { onSelectVideo, deleteVideo, archiveVideo })(VideoDetail);

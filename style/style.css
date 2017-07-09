@@ -46,6 +46,7 @@ body {
 
 /*Video Detail*/
 .video-detail {
+    background: #22242a;
     padding: 0 !important; /*space between vid and list. try changing col.*/
 }
 
@@ -55,7 +56,24 @@ body {
     padding: 10px;
 }
 
-
+/* Tabs */
+.tabs {
+	margin-top: 15px;
+}
+.tabs .btn {
+	border-radius: 0;
+	width: 50%;
+	color: #727785;
+	background: #373a3c;
+	display: inline-block;
+}
+div > .btn:nth-child(2){
+	float: right;
+}
+.btn.active {
+	background: #22242a;
+	color: white;
+}
 
 
 /*Video List*/

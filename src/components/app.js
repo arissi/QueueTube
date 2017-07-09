@@ -11,7 +11,7 @@ export default class App extends Component {
         <SearchBar />
         <VideoList />
         <VideoDetail />
-        <QueueList />
+        {this.props.children}
       </div>
     );
   }

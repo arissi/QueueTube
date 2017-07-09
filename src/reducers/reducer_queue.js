@@ -78,14 +78,18 @@ export default function (state=INITIAL_STATE, action) {
         case SELECT_VIDEO:
             return { ...state, selectedVideo: action.payload };
         case QUEUE_VIDEO: 
-            console.log("Queue Video Action", action.payload);
+						var videoId = action.payload.id.videoId;
+						for(var vid = 0; vid < state.queue.length; vid++){
+							if (videoId == state.queue[vid].id) return state;
+						}
+
             return { 
                 ...state, 
                 queue: [ 
                     ...state.queue, 
                     { 
                         // this can be changed. maybe just pass id and title instead of all data
-                        id: action.payload.id.videoId,
+                        id: videoId,
                         video: action.payload 
                     }]
             };
