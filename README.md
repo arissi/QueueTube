@@ -2,16 +2,21 @@
 
 ![QueueTube](http://i.imgur.com/IV805cZ.png)
 
-YouTube app with instant searching and playlist capabilities
+YouTube app with instant searching and playlist capabilities.
 
 It's a single page app. 
 
-# Features 
+### Features 
 Instant AJAX search 
 Playlists 
 History
 Automatomatic Video Play
 
-built with ReactJS ReduxJS.
+### Built Using:
 
-hosted on [heroku](https://thequeuetube.herokuapp.com/)
+ * ReactJS 
+ * ReduxJS
+
+### Deployed
+
+The app is deployed [here](https://thequeuetube.herokuapp.com/) at Heroku
