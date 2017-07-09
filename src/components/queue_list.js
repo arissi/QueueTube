@@ -27,7 +27,7 @@ class QueueList extends Component {
         return (
             <div className="queue-container col-xs-6">
                 <ul 
-                className="list-group queue-list"
+                className="queue-list"
                 >
                     {this.props.queue.queue.map(this.renderQueue.bind(this))}
                 </ul>

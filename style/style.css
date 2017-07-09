@@ -39,11 +39,6 @@ body {
 }
 
 
-
-
-
-
-
 /*Video Detail*/
 .video-detail {
     background: #22242a;
@@ -78,7 +73,7 @@ div > .btn:nth-child(2){
 
 /*Video List*/
 .list-group {
-    height: 85vh;
+		height: 83vh;
     overflow-x: hidden;
     padding-right: 0 !important; /*scrollbar padding*/
 }
@@ -95,15 +90,15 @@ div > .btn:nth-child(2){
 
 /*Queue List*/
 .queue-container {
-    height: 30vh !important;
-    max-height: 30vh !important;
     background: #22242a;
     float: right !important;
     padding: 0 !important;
+		overflow-x: hidden;
 }
 
 .queue-list {
-    max-height: 30vh !important;
+	padding: 0px;
+	margin-bottom: 0px;
 }
 
 .queue-list li {
